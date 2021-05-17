@@ -1,0 +1,344 @@
+/*Reset inicial*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f6f6f6;
+}
+
+html .row { 
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/*Estilo del ENCABEZADO--------------------------------------------------*/
+
+#encabezado {
+	height: 1080px;
+	width: 100%;
+	background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../IMG/background.jpg);
+	background-size: cover;
+}
+
+/*Inicio de diseño del MENU principal-------------------------------------*/
+nav {
+	width: 100%;
+	height: 150px;
+	background-color: rgba(00,00,00,0.2);
+	/*overflow: hidden;*/
+	position: fixed;
+	top: 0;
+	z-index: 5;
+	transition-property: top, height, font-size;
+	transition-duration: 0.75s;
+}
+
+#logo {
+	width: 180px;
+	height: 100%;
+	/*background-color: grey;*/
+	float: left;
+	display: block;
+	margin-left: 10vw;
+	/*margin-top: 20px;*/
+	padding: 5px;
+	transition-property: padding;
+	transition-duration: 0.75s;
+}
+
+html .btn-nav {
+	font-size: 1.5rem;
+}
+
+html .link-logo {
+	font-size: 2rem;
+	color: tomato;
+}
+
+#perfil {
+	max-height: 80px;
+	margin-left: 1vw;
+	margin-right: 10vw;
+}
+
+.zoom {
+	transition: transform .2s;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+}
+  
+.zoom:hover {
+	-ms-transform: scale(1.5); /* IE 9 */
+	-webkit-transform: scale(1.5); /* Safari 3-8 */
+	transform: scale(1.5); 
+}
+
+#menu {
+	list-style-type: none;
+	width: auto;
+	overflow: hidden;
+	float: right;
+	margin-right: 75px;
+	line-height: 150px;
+	transition-property: line-height;
+	transition-duration: 0.75s;
+}
+
+/*Estilo de página ENCABEZADO---------------------------------------------*/
+
+#tituloEncabezado {
+	font-family: 'Tillana', cursive;
+	text-shadow: 4px 4px 6px rgba(1, 1, 1, 0.9);
+	color: white;
+	font-size: 4rem;
+	/*background-color: orange;*/
+	text-align: center;
+	position: relative;
+	top:420px;
+	animation-name: fadein; 
+	animation-duration: 4s;
+}
+
+#subtituloEncabezado {
+	font-family: 'Heebo', sans-serif; /*Fuente externa*/
+	font-size: 1.2rem;
+	width: 1200px;
+	color: white;
+	/*background-color: olive;*/
+	text-align: center;
+	position: relative;
+	top:420px;
+	margin-right: auto;
+	margin-left: auto;
+	font-weight: normal;
+	opacity: 0;
+	animation-name: fadeinSub; 
+	animation-duration: 4s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+	0% { opacity:0; top:500px;}
+	50% {opacity: 1; top:500px;}
+	100% {opacity: 1; top:420px;}
+}
+
+@keyframes fadeinSub {
+	0% { opacity:0;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+/*Estilo de CLASES--------------------------------------------------------*/
+
+.tituloSeccion {
+	font-family: 'Tillana', cursive;
+	color: black;
+	font-size: 4rem;
+	/*background-color: olive;*/
+	text-align: center;
+	margin-top: 140px;
+}
+
+#clases {
+	width: 100%;
+	background-color: #f6f6f6;
+	background-size: cover;
+}
+
+#contenedorClase {
+	width: 1200px;
+	/*background-color: orange;*/
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	margin-top: 95px;
+}
+
+.etiquetaClase {
+	font-family: 'Tillana', cursive;
+	color: black;
+	width: 33.33%;
+	font-size: 2.5rem;
+	float: left;
+	text-align: center;
+	transition-property: color;
+	transition-duration: 0.5s;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+
+.pestanaActiva{
+	color: tomato;
+	/*text-decoration: underline;*/
+	border-bottom-style: solid;
+}
+
+	/* Estilo tabla */
+
+	.tabla-head, .tabla-row, .tabla-row-2 {
+		font-family: 'Heebo', sans-serif;
+		text-align: center;
+		font-size: 2rem;
+		height: 5vh;
+	}
+
+	.tabla-head > .col-2 {
+		background-color: #7D96D2;
+		color: white;
+		height: 5vh;
+		padding-top: 1vh;
+	}
+
+	.tabla-row > .col-2 {
+		background-color: #95E5FE;
+		height: 5vh;
+		padding-top: 1vh;
+	}
+
+	.btn-estilo {
+		background-color:lightgreen;
+		border-radius: 7px;
+		padding-right: 1vw;
+		padding-left: 1vw;
+	}
+
+	.btn-estilo:hover {
+		background-color:grey;
+		color: white;
+	}
+
+/*Estilo de página PIE----------------------------------------------------*/
+
+#pie {
+	width: 100%;
+	height: 10vh;
+	background-color: #595B56;
+	text-align: center;
+}
+
+#pie i {
+	line-height: 100px;
+	color: white;
+	font-size: 3rem;
+	padding: 0px 50px;
+	transition-property: color;
+	transition-duration: 0.5s;
+	cursor: pointer;
+}
+
+#pie i:hover {
+	color: lightblue;
+}
+
+/* Estilo de inicio de sesión--------------------------------------------- */
+
+#home-sesion {
+	height: 90vh;
+	width: 100%;
+	background-color: #F6F6F6;
+	background-size: cover;
+}
+
+html .logo-sesion {
+	margin-top: 5vh;
+}
+
+html input {
+	width: 406px;
+	height: 45px;
+	margin-top: 2vh;
+	font-size: 2rem;
+}
+
+html input[type=text] {
+	padding-left: 1vw;
+}
+
+#contenedor-inicio {
+	height: 330px;
+	border: grey 2px solid;
+	border-collapse: separate;
+	background-color: white;
+}
+
+#eres-nuevo {
+	font-size: 2rem;
+	margin-top: 2vh;
+	
+}
+
+html h3 {
+	font-size: 3rem;
+}
+
+/* Estilo de registro ---------------------------------------------------- */
+
+#home-registro {
+	height: 90vh;
+	width: 100%;
+	background-color: #F6F6F6;
+	background-size: cover;
+}
+
+#contenedor-registro {
+	height: 430px;
+	border: grey 2px solid;
+	border-collapse: separate;
+	background-color: white;
+}
+
+/* Estilo de perfil alumno------------------------------------------------ */
+
+#home-perfil-alumno {
+	height: 90vh;
+	width: 100%;
+	background-color: #F6F6F6;
+	background-size: cover;
+}
+
+#contenedor-perfil {
+	border: grey 2px solid;
+	border-collapse: separate;
+	background-color: white;
+}
+
+#img-perfil {
+	max-width: 100%;
+	margin-top: 1.5vh;
+	margin-bottom: 1vh;
+	padding-left: 0.5vw;
+	padding-right: 0.5vw;
+}
+
+.titulo-perfil {
+	font-size: 1.2rem;
+	color: grey;
+	padding-left: 0.5vw;
+	padding-right: 0.5vw;
+}
+
+.texto-perfil {
+	font-size: 1.5rem;
+	padding-left: 0.5vw;
+	padding-right: 0.5vw;
+}
+
+.btn-cancelar {
+	background-color:tomato;
+	border-radius: 7px;
+	color: white;
+	padding-right: 1vw;
+	padding-left: 1vw;
+}
+
+.btn-cancelar:hover {
+	background-color:grey;
+	color: white;
+}
